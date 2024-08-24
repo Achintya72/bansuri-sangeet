@@ -2,32 +2,117 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: theme(colors.white.light);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.layout {
+  max-width: 1480px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%
+}
+
+.loader {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  animation: spin 500ms ease infinite;
+  background-color: theme(colors.white.extraDark);
+}
+
+.first {
+  animation-delay: 100ms;
+}
+
+.second {
+  animation-delay: 200ms;
+}
+
+@keyframes spin {
+  from {}
+  to {
+    transform: rotateX(180deg) rotateY(180deg);
   }
+}
+
+.loading-card {
+  animation: pulse 2s ease infinite;
+}
+
+.loading-card:nth-child(1) {
+  animation-delay: 300ms;
+}
+
+@keyframes pulse {
+  from {}
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+small {
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6, p, .button {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+h2 {
+  font-family: var(--font-quicksand);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 100%;
+}
+
+h3 {
+  font-family: var(--font-serif);
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+  font-family: var(--font-serif);
+}
+
+h5 {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  line-height: 100%;
+
+}
+
+h6 {
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+}
+
+p {
+  font-family: var(--font-quicksand);
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.button {
+  font-family: var(--font-quicksand);
+  font-weight: 700;
+  font-size: 16px;
 }
