@@ -1,6 +1,6 @@
-import { User } from "./types";
+import { Profile } from "./types";
 
-let defaultUser: User = {
+let defaultUser: Profile = {
     name: "",
     email: "",
     joinDate: new Date(),
