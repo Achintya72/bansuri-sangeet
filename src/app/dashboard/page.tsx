@@ -17,7 +17,7 @@ export default function Dashboard() {
         if (populated == false) {
             router.replace("/login");
         }
-    }, [user, populated]);
+    }, [user, populated, router]);
 
     const sendRequest = () => {
         

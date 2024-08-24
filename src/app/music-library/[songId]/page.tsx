@@ -22,7 +22,7 @@ export default function SongPage() {
         if (songs != null && song == undefined) {
             router.replace("/music-library");
         }
-    }, [songs, song]);
+    }, [songs, song, router]);
 
     return (
         <main className="layout min-h-screen flex gap-[20px] mt-[150px]">

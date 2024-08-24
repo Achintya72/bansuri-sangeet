@@ -40,5 +40,5 @@ export type {
     SongFile,
     Song,
     StudentSong,
-    Profile
+    Profile,
 }

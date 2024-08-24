@@ -69,7 +69,7 @@ const DataContextProvider = ({ children }: React.PropsWithChildren) => {
                 changePopulated(false);
             }
         }
-    }, [loggedIn, authUser])
+    }, [loggedIn, authUser, pathName, router])
 
     const value = {
         authUser,
